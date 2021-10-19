@@ -1,4 +1,4 @@
-<h2>Stoq App</h2>
+# Stoq App
 
 ## About Laravel
 
