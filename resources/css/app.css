@@ -9,6 +9,10 @@
     padding: 8px;
 }
 
+.stock-price-details table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
 .stock-price-details table td:first-child {
 	font-weight: bold;
 	text-transform: capitalize;
