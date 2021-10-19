@@ -1,0 +1,25 @@
+version: '3.7'
+services: 
+  app:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    image: 'laravelapp'
+    ports:
+      - 8000:80
+      - 8443:443
+    volumes:
+      - ./:/var/www/html
+    container_name: 'stoqapp'
+  db:
+    image: mysql:5.7
+    restart: always
+    ports: 
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: 'stoqapp_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_ROOT_PASSWORD: ""
+    volumes:
+      - ./db:/var/lib/mysql
+    container_name: 'stoqapp_db'
