@@ -44,7 +44,7 @@ API_URL=https://www.alphavantage.co/query?function=%s&symbol=%s&apikey=%s
 API_FUNCTION=GLOBAL_QUOTE
 API_KEY=0O18XUJW9P8QVGQJ
 ```
-
+- Create Facebook APP ID and Secret and update the above .env file. [Facebook Developer](https://developers.facebook.com/docs/facebook-login/web/)
 - Generate APP Key using 
 ```
 php artisan key:generate
