@@ -17,7 +17,21 @@ $(document).ready(function() {
             data: {symbol: $('.check-price-form #StockSymbol').val()},
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success: function(response){
-                $priceDetails.text(response.price);
+
+                $table = $('<table>');
+
+                $.each(response, function(i, item) {
+                    $table.append(
+                        $('<tr>').append(
+                            $('<td>').text(i),
+                            $('<td>').text(item)
+                        )
+                    );
+                });
+
+                $priceDetails.html($table);
+
+
                 $resultContainer.removeClass('hidden');
                 $checkPriceButton.removeAttr("disabled");
                 $loadingContainer.addClass('hidden');
