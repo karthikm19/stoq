@@ -1,3 +1,6 @@
+<!-- <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0&appId=352079290032286&autoLogAppEvents=1" nonce="Y04J7uZR"></script> -->
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -55,6 +58,8 @@
                     Login with Facebook
                 </a>
             </div>
+
+            <!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
