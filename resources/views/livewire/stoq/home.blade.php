@@ -8,7 +8,27 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                Welcome!!!
+                <div class="mt-4 ml-4 mb-4 mr-4">
+                    <div class="text-2xl">
+                        Welcome to Stoq!
+                    </div>
+                    <div class="text">
+                        A simple app to check the current information of stock price.
+                    </div>
+                    <form method="POST" action="#" class="mt-3">
+                        @csrf
+
+                        <div>
+                            <x-jet-label for="StockSymbol" value="{{ __('Enter Stock Symbol (Ex: AMZN)') }}" />
+                            <x-jet-input id="StockSymbol" class="block mt-1 w-half" type="text" name="StockSymbol"
+                                required autofocus />
+                            <x-jet-button class="mt-2">
+                                {{ __('Check') }}
+                            </x-jet-button>
+                        </div>
+                        
+                    </form>
+                </div>
             </div>
         </div>
     </div>
