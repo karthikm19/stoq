@@ -74,3 +74,8 @@ Please find some of the screenshots how the app will look and work!
 
 ### Home Screen - Search Error/No Result
 ![Stoq App - Home](https://github.com/karthikm19/stoq/blob/master/screenshots/Screenshot%202021-10-19%20at%2020.33.58.png)
+
+
+### Database
+Responses stored in the database
+![Database](https://github.com/karthikm19/stoq/blob/master/screenshots/Screenshot%202021-10-19%20at%2021.07.24.png)
