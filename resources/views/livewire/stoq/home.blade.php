@@ -1,20 +1,16 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Home') }}
-        </h2>
-    </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="mt-4 ml-4 mb-4 mr-4">
-                    <div class="text-2xl">
-                        Welcome to Stoq!
-                    </div>
+
+                    <h1 class="font-semibold text-2xl text-gray-800 leading-tight">
+                        {{ __('Welcome to Stoq!') }}
+                    </h1>
                     <div class="text">
                         A simple app to check the current information of stock price.
                     </div>
+
                     <form method="POST" action="#" class="check-price-form mt-3">
                         @csrf
 
