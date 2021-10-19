@@ -49,6 +49,10 @@ API_KEY=0O18XUJW9P8QVGQJ
 ```
 php artisan key:generate
 ```
+- RUN 
+```
+npm install && npm run dev
+```
 - RUN docker-compose up -d
 - This builds the container and setup the application to run. Might take a while
 - Once completed successfully, run "docker ps", you should see two container running
