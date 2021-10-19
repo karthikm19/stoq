@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,10 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+/*
+ * Facebook authentication routes
+ */
+Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
+Route::get('facebook/callback', [SocialController::class, 'loginWithFacebook']);
