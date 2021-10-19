@@ -15,7 +15,7 @@
                     <div class="text">
                         A simple app to check the current information of stock price.
                     </div>
-                    <form method="POST" action="#" class="mt-3">
+                    <form method="POST" action="#" class="check-price-form mt-3">
                         @csrf
 
                         <div>
@@ -28,6 +28,15 @@
                         </div>
                         
                     </form>
+
+                    <div class="invisible result-container mt-3">
+                        <div class="text-xl">
+                            Result
+                        </div>
+                        <div class="mt-2 stock-price-details">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

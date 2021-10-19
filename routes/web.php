@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\StockPriceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
     return view('livewire/stoq/home');
 })->name('home');
+
+/*
+ * Stock Price REST Controller
+ */
+Route::post('stoq/check-price', 'StockPriceController@check');
 
 /*
  * Facebook authentication routes
