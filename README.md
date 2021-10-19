@@ -57,3 +57,20 @@ npm install && npm run dev
 - This builds the container and setup the application to run. Might take a while
 - Once completed successfully, run "docker ps", you should see two container running
 - Now go to browser and open "https://127.0.0.1:8443"
+
+## Screenshots
+
+Please find some of the screenshots how the app will look and work!
+
+### Login Screen
+![Stoq App - Login](https://github.com/karthikm19/stoq/blob/master/screenshots/login.png)
+
+### Home Screen
+![Stoq App - Home](https://github.com/karthikm19/stoq/blob/master/screenshots/Screenshot%202021-10-19%20at%2020.32.13.png)
+
+
+### Home Screen - Search Result
+![Stoq App - Home](https://github.com/karthikm19/stoq/blob/master/screenshots/Screenshot%202021-10-19%20at%2020.33.13.png)
+
+### Home Screen - Search Error/No Result
+![Stoq App - Home](https://github.com/karthikm19/stoq/blob/master/screenshots/Screenshot%202021-10-19%20at%2020.33.58.png)
