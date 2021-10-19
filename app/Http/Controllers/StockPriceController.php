@@ -41,7 +41,7 @@ class StockPriceController extends Controller
 
                 return response()->json($priceDetails, $response->status());
             } else {
-                return response()->json(self::API_ERROR, $response->status());
+                return response()->json(self::API_ERROR, 404);
             }
         } catch (Exception $exception) {
             dd($exception->getMessage());

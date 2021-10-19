@@ -17,9 +17,7 @@ $(document).ready(function() {
             data: {symbol: $('.check-price-form #StockSymbol').val()},
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success: function(response){
-
                 $table = $('<table>');
-
                 $.each(response, function(i, item) {
                     $table.append(
                         $('<tr>').append(
@@ -28,16 +26,17 @@ $(document).ready(function() {
                         )
                     );
                 });
-
                 $priceDetails.html($table);
-
 
                 $resultContainer.removeClass('hidden');
                 $checkPriceButton.removeAttr("disabled");
                 $loadingContainer.addClass('hidden');
             },
-            error: function() {
-                $priceDetails.text("An error occured while processing your request. Please try again!");
+            error: function(response, textStatus, errorThrown) {
+                if(response.status == 404) {
+                    $resultContainer.removeClass('hidden');
+                    $priceDetails.text("An error occured while processing your request. Please try again!");
+                }
                 $checkPriceButton.removeAttr("disabled");
                 $loadingContainer.addClass('hidden');
             }

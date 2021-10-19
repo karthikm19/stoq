@@ -26,7 +26,7 @@
                     </form>
 
                     <div class="result-container mt-3 hidden">
-                        <div class="text-xl">
+                        <div class="text-l">
                             Result
                         </div>
                         <div class="mt-2 stock-price-details">
