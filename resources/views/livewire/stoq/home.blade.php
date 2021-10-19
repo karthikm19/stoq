@@ -23,7 +23,7 @@
                             <x-jet-input id="StockSymbol" class="block mt-1 w-half" type="text" name="StockSymbol"
                                 required autofocus />
                             <x-jet-button class="mt-2 check-price-button">
-                                {{ __('Check') }}
+                                {{ __('Get Price') }}
                             </x-jet-button>
                         </div>
                         
