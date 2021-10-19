@@ -8,16 +8,22 @@ $(document).ready(function() {
         e.preventDefault();
         
         $checkPriceButton.attr("disabled", true);
+        $resultContainer.addClass('hidden');
         $loadingContainer.removeClass('hidden');
     
         $.ajax({
             url: '/stoq/check-price',
             type: "post",
-            data: {symbol: 'AMZN'},
+            data: {symbol: $('.check-price-form #StockSymbol').val()},
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success: function(response){
                 $priceDetails.text(response.price);
                 $resultContainer.removeClass('hidden');
+                $checkPriceButton.removeAttr("disabled");
+                $loadingContainer.addClass('hidden');
+            },
+            error: function() {
+                $priceDetails.text("An error occured while processing your request. Please try again!");
                 $checkPriceButton.removeAttr("disabled");
                 $loadingContainer.addClass('hidden');
             }

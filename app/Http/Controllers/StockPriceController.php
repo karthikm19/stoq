@@ -10,8 +10,8 @@ class StockPriceController extends Controller
     public function check(Request $request)
     {
         $symbol= $request->symbol;
-
-        $response = Http::get("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=AMZN&apikey=0O18XUJW9P8QVGQJ");
+        $apiUrl = sprintf(env("API_URL"), env("API_FUNCTION"), $symbol, env("API_KEY"));
+        $response = Http::get($apiUrl);
         $stockPrice  = json_decode($response->body());
 
         return response()->json(array('price'=> $stockPrice->{"Global Quote"}->{"05. price"}), 200);
