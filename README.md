@@ -54,7 +54,11 @@ php artisan key:generate
 npm install && npm run dev
 ```
 - RUN docker-compose up -d
-- This builds the container and setup the application to run. Might take a while
+- This builds the container and setup the application to run. Might take a while.
+- RUN below command to do DB migration
+```
+docker-compose exec app php artisan migrate
+```
 - Once completed successfully, run "docker ps", you should see two container running
 - Now go to browser and open "https://127.0.0.1:8443"
 
